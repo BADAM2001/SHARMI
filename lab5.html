@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animations</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px auto;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .buttons {
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .fade {
+            background-color: green;
+            color: white;
+        }
+        
+        .slide {
+            background-color: orange;
+            color: white;
+        }
+        
+        .move {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>jQuery Animations Example</h2>
+
+    <div class="box" id="box">Animate Me</div>
+
+    <div class="buttons">
+        <button class="fade" id="fadeToggle">Fade Toggle</button>
+        <button class="slide" id="slideToggle">Slide Toggle</button>
+        <button class="move" id="moveRight">Move Right</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Fade In/Out Animation
+            $("#fadeToggle").click(function() {
+                $("#box").fadeToggle(1000); // Toggle fade with duration of 1 second
+            });
+
+            // Slide Up/Down Animation
+            $("#slideToggle").click(function() {
+                $("#box").slideToggle(1000); // Toggle slide with duration of 1 second
+            });
+
+            // Move Box to the Right
+            $("#moveRight").click(function() {
+                $("#box").animate({
+                    left: "+=100px"
+                }, 1000); // Move right by 100px
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            padding: 50px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2em;
+        }
+        
+        .box {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: #3498db;
+            color: white;
+            line-height: 200px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .box:hover {
+            background-color: #2ecc71;
+            transform: scale(1.1);
+        }
+        
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #c0392b;
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 600px) {
+            .box {
+                width: 150px;
+                height: 150px;
+                line-height: 150px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Interactive Web Page</h1>
+        <div class="box">Hover Me</div>
+        <div class="box">Change Color</div>
+        <br>
+        <button class="button">Click Me</button>
+    </div>
+
+</body>
+
+</html>
